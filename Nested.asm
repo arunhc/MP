@@ -11,7 +11,7 @@ func
 	POP {PC}
 	END
 ++++++++++++++++++++++++++
-FUNCTION 2
+#FUNCTION 2
 	PRESERVE8
 	THUMB
 	AREA |.text|, CODE, READONLY
@@ -24,7 +24,7 @@ func2
 	END
 	
 ++++++++++++++++++++++++++++++
-FUNCTION CALLER
+#FUNCTION CALLER
 	PRESERVE8
 	THUMB
 	AREA |.text|, CODE, READONLY
