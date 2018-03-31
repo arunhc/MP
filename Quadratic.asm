@@ -1,7 +1,7 @@
-		PRESERVE8          
-                THUMB      
-                AREA    |.text|, CODE, READONLY
-		EXPORT __main			
+	PRESERVE8          
+        THUMB      
+        AREA    |.text|, CODE, READONLY
+	EXPORT __main			
 __main 
 	MOVS r0,#5 ;x value
 	MOVS r4,r0
