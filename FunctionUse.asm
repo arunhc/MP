@@ -1,4 +1,4 @@
-function caller
+;function caller
 	PRESERVE8
 	THUMB
 	AREA |.text|, CODE, READONLY
