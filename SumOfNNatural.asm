@@ -7,7 +7,7 @@ PRESERVE8 ; Indicate the code here preserve
 __main 	
 			LDR	R0,=0X00000001
 			LDR	R1,=0X00000002
-strt3			
+start3			
 		cmp r1,#10
 		ble start2
 		movs r0,#0
@@ -15,7 +15,7 @@ strt3
 start2		
 		adds r0,r1,r0
 		adds r1,r1,#1		
-		b strt3
+		b start3
 			
 stop	      B	   stop		 		;stop program
 	          END      
