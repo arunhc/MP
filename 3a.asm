@@ -6,7 +6,7 @@ __main
 	LDR r0,=0x20000200
 	LDR r1,=0x20000100
 	MOVS r2,#10
-up
+loop
 	LDRB r3,[r0]
 	LDRB r4,[r1]
 	STRB r4,[r0]
@@ -14,6 +14,6 @@ up
 	ADDS r0,r0,#1
 	ADDS r1,r1,#1
 	SUBS r2,r2,#1
-	BNE up
-STOP B STOP
+	BNE loop
+	NOP
 	END
