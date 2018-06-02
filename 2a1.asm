@@ -3,7 +3,7 @@
 	AREA |.text|, CODE, READONLY
 	EXPORT __main
 __main
-	LDR R0, =0xFFFFFFFF
+	LDR R0, =0xABCDEF01
 	MOVS R1, #15 
 	MOVS R2, #4  ;4=width
 	MOVS R3, #13 ;32-15-4
