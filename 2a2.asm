@@ -8,5 +8,5 @@ __main
 	MOV R1, R0
 	LSLS R0, R0, #5;
 	LSRS R0, R0, #29
-STOP B STOP
+	NOP
 	END
