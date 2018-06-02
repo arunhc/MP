@@ -26,22 +26,13 @@ int main (void)
 	while (1)
 	{		 
     DrvGPIO_ClrBit(E_GPA,12);
-    DrvGPIO_SetBit(E_GPA,13); 
-    DrvGPIO_SetBit(E_GPA,14); 
 	DrvSYS_Delay(1000000); 		   
-
     DrvGPIO_SetBit(E_GPA,12); 
     DrvGPIO_ClrBit(E_GPA,13);
-    DrvGPIO_SetBit(E_GPA,14); 
 	DrvSYS_Delay(1000000);			  
-
-    DrvGPIO_SetBit(E_GPA,12); 
     DrvGPIO_SetBit(E_GPA,13); 
     DrvGPIO_ClrBit(E_GPA,14);
 	DrvSYS_Delay(1000000);			  
-		
-    DrvGPIO_SetBit(E_GPA,12);
-    DrvGPIO_SetBit(E_GPA,13);
     DrvGPIO_SetBit(E_GPA,14);
 	DrvSYS_Delay(1000000);
 
