@@ -14,5 +14,5 @@ func1
 
 __main
 	BL func1
-STOP B STOP
+	NOP
 	END
