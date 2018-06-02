@@ -1,46 +1,38 @@
-	PRESERVE8 ; Indicate the code here preserve  
-	; 8 byte stack alignment         
-        THUMB     ; Indicate THUMB code is used       
-        AREA    |.text|, CODE, READONLY
-			   
-              EXPORT __main			 
-; Start of CODE area 
+	PRESERVE8         
+        THUMB          
+        AREA |.text|,CODE,READONLY 
+	EXPORT __main			  
 
 __main  
-
-     		LDR R0, =0
-
-
-	 	CMP R0, #3 		; Compare input to maximum valid choice
-	 	BHI default_case ; Branch to default case if higher than 3
-	 	MOVS R2, #4 ; Multiply branch table offset by 4
-		MULS R0, R2, R0 ; (size of each entry)
-	 	LDR R1, =BranchTable ; Get base address of branch table(0x284)
-	 	LDR R2,[R1,R0] ; Get the actual branch destination
-	 	BX R2 ; Branch to destination
-	 	ALIGN 4 ; Alignment control. The table has
-BranchTable   	; to be word aligned to prevent unaligned read
-       		; table of each destination address
-	        DCD	Dest0
-      		DCD     Dest1
-		DCD Dest2
-		DCD Dest3
+	LDR R0, =2
+	CMP R0,#3
+	BHI default_case
+	MOVS R2,#4
+	MULS R0,R2,R0
+	LDR R1,=BranchTable
+	LDR R2,[R1,R0]
+	BX R2
+	ALIGN 4
+BranchTable
+    	DCD dest0
+      	DCD dest1
+	DCD dest2
+	DCD dest3
 
 default_case
-stop      B   stop 
- 				; Instructions for default case
-Dest0    ldr r0, =10
-stop1     B     stop1
- 				; Instructions for case ‘0’
-Dest1     ldr r0, =20
-stop2       B    stop2
- 				; Instructions for case ‘1’
-Dest2     ldr r0, =30
-stop3       B   stop3
-				; Instructions for case ‘2’
-Dest3    ldr r0, =40
-stop4      B   stop4
- 				; Instructions for case ‘3’
-stop5       B   stop5
-
-          END
+	LDR R0,=0XF
+dest0    
+	LDR R0,=0XA
+	B next
+dest1     
+	LDR R0,=0XB   
+	B next
+dest2     
+	LDR R0,=0XC
+	B next
+dest3    
+	LDR R0,=0XD
+	B next
+next
+	NOP
+END
