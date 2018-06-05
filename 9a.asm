@@ -1,15 +1,14 @@
-	PRESERVE8          
-        THUMB      
-        AREA    |.text|, CODE, READONLY
-	EXPORT __main			
-__main 
-	MOVS r0,#5 ;x value
-	MOVS r4,r0
-	MOVS r1,#3
-	MOVS r2,#2
-	MULS r0,r0,r0
-	MULS r0,r2,r0
-	ADDS r0,r4,r0
-	ADDS r0,r0,r1
-STOP B STOP
+	PRESERVE8
+	THUMB
+	AREA |.text|,CODE,READONLY
+	EXPORT __main
+__main
+	MOVS R0,#5
+	MOVS R1,#5
+	MOVS R2,#2
+	MUL R1,R1,R0
+	MUL R1,R2,R1
+	ADDS R1,R1,R0
+	ADDS R1,R1,#3
+stop B stop
 	END
