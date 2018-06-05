@@ -1,18 +1,15 @@
 	PRESERVE8
 	THUMB
-	AREA |.text|, CODE, READONLY
-
+	AREA |.text|,CODE,READONLY
 	EXPORT __main
-		
-func1
-   	MOVS r0,#2
-   	MOVS R1, #2
-   	MULS r0,r1,r0
-   	MOVS R2,#9
-   	ADDS R0,R0,R2
-   	BX LR
-
+func
+	MOVS R1,#2
+	MOVS R3,#9
+	MULS R0,R1,R0
+	ADDS R0,R0,R3
+	BX lr
 __main
-	BL func1
-	NOP
+	MOV R0,#4
+	BL func
+stop B stop
 	END
