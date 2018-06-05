@@ -1,38 +1,35 @@
-	PRESERVE8         
-        THUMB          
-        AREA |.text|,CODE,READONLY 
-	EXPORT __main			  
-
-__main  
-	LDR R0, =2
+	PRESERVE8
+	THUMB
+	AREA |.text|,CODE,READONLY
+	EXPORT __main
+__main
+	MOVS R0,#3
 	CMP R0,#3
 	BHI default_case
 	MOVS R2,#4
-	MULS R0,R2,R0
+	MUL R0,R2,R0
 	LDR R1,=BranchTable
 	LDR R2,[R1,R0]
 	BX R2
 	ALIGN 4
 BranchTable
-    	DCD dest0
-      	DCD dest1
-	DCD dest2
-	DCD dest3
-
+	DCD Test0
+	DCD Test1
+	DCD Test2
+	DCD Test3
 default_case
-	LDR R0,=0XF
-dest0    
-	LDR R0,=0XA
-	B next
-dest1     
-	LDR R0,=0XB   
-	B next
-dest2     
-	LDR R0,=0XC
-	B next
-dest3    
-	LDR R0,=0XD
-	B next
-next
-	NOP
-END
+	MOVS R0,#1
+stop B stop 
+Test0    
+	MOVS R0,#2
+stop1 B stop1
+Test1     
+	MOVS r0,#3
+stop2 B stop2
+Test2     
+	MOVS R0,#4
+stop3 B stop3
+Test3   
+	MOVS R0,#5
+stop4 B stop4
+	END
