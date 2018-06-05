@@ -3,7 +3,7 @@
 	AREA |.text|,CODE,READONLY
 	EXPORT __main
 __main
-	LDR R0,=0x20000100
+	LDR R0,=0x20000000
 	LDR R1,=0x20000200
 	MOV R2,#0
 swap
