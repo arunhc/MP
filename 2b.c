@@ -5,7 +5,7 @@
 #include "scankey.h"
 #include "NUC1xx-LB_002\LCD_Driver.h"
 
-int32_t main (void)
+int main (void)
 {int8_t number;
 char TEXT0[16]="Smpl_LCD_Keypad";
 char TEXT1[16]="Keypad:        ";
