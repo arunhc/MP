@@ -26,7 +26,7 @@ int32_t main()
 	Initial_panel();
 	clr_all_panel();
 	print_lcd(0,"Smpl_GPIO_Intr");	
-	DrvGPIO_Open(E_GPB, 14, E_IO_INPUT);
+	DrvGPIO_Open(E_GPA, 14, E_IO_INPUT);
 	DrvGPIO_EnableEINT0(E_IO_BOTH_EDGE, E_MODE_EDGE, EINT0Callback);
 	DrvGPIO_Open(E_GPB, 15, E_IO_INPUT);
 	DrvGPIO_EnableEINT1(E_IO_BOTH_EDGE, E_MODE_EDGE, EINT1Callback);
