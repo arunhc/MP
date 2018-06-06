@@ -21,18 +21,18 @@ int main (void)
 		DrvGPIO_ClrBit(E_GPC, 15);
 		DrvSYS_Delay(100000);
 		DrvGPIO_SetBit(E_GPC, 15);
-		//DrvSYS_Delay(100000);			not sure if delay is required to work like a ring counter 
+		//DrvSYS_Delay(100000);	
 		DrvGPIO_ClrBit(E_GPC, 14);
 		DrvSYS_Delay(100000);
 		DrvGPIO_SetBit(E_GPC, 14);
-		//DrvSYS_Delay(100000);			check if required while execution			
+		//DrvSYS_Delay(100000);				
 		DrvGPIO_ClrBit(E_GPC, 13);
 		DrvSYS_Delay(100000);
 		DrvGPIO_SetBit(E_GPC, 13);
-		//DrvSYS_Delay(100000);			ring counter is same like digital lab
+		//DrvSYS_Delay(100000);	
 		DrvGPIO_ClrBit(E_GPC, 12);
 		DrvSYS_Delay(100000);
 		DrvGPIO_SetBit(E_GPC, 12);
-		//DrvSYS_Delay(100000);			each led glows once and comes back to the starting one and cycles
+		//DrvSYS_Delay(100000);
 	}
 }
