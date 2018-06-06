@@ -17,7 +17,7 @@ void EINT1Callback()
 		show_seven_segment(1,7);
 		DrvSYS_Delay(500000);
 }
-int32_t main()
+int main()
 {
 	char TEXT[16];
 	UNLOCKREG();
