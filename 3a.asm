@@ -8,7 +8,7 @@ __main
 	MOV R2,#0
 swap
 	LDRB R3,[R0,R2]
-	LDRB R4.[R1,R2]
+	LDRB R4,[R1,R2]
 	STRB R3,[R1,R2]
 	STRB R4,[R0,R2]
 	ADD R2,R2,#1
